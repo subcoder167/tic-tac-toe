@@ -40,15 +40,18 @@ function play() {
             console.log(cell);
             if(!cell.innerHTML == '') {
                 cell.onclick = false;
-                console.log("Cell is taken!");
             }
             else{
                 cell.innerHTML = currentPlayer;
                 if ( currentPlayer == "X") {
                 currentPlayer = "O";
+                document.querySelector(".p2").style.display = "block";
+                document.querySelector(".p1").style.display = "none"                    
                 }
                 else{
                 currentPlayer = "X";
+                document.querySelector(".p1").style.display = "block";
+                document.querySelector(".p2").style.display = "none";
                 }    
             }
         });
@@ -102,15 +105,11 @@ function win() {
                 for (var i = 0; i < cellsArray.length; i++) {
                     cellsArray[i].classList.remove('taken');
                     takenArray = document.querySelectorAll(".taken");
-                  }
-                  
-                  
+                  }                 
                   play();
                 }, 600)
                 document.querySelector(".playArea").style.display = "none";
                   document.querySelector(".tie").style.display = "block";
-                  console.log('its a tie');
-                  console.log(takenArray);
             }
         }
     })
@@ -118,24 +117,20 @@ function win() {
 function score() {
     mySound1.play();
     if (winPlayer == "X") {
-        console.log("X won");
         currentPlayer = "O";
         score1++;
         for (var i = 0; i < cellsArray.length; i++) {
             cellsArray[i].classList.remove('taken');
             takenArray = document.querySelectorAll(".taken");
           }
-          console.log(takenArray);
         document.getElementById("scr1").innerHTML = score1;
         document.getElementById("pname1").innerHTML += " WON";
     }
     else {
-        console.log("O won");
         currentPlayer = "X";
         score2++;
         document.getElementById("scr2").innerHTML = score2;
         document.getElementById("pname2").innerHTML += " WON";
-
     }
     setTimeout(function() {
         for(i = 0;i<cellsArray.length;i++){
