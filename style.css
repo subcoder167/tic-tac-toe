@@ -1,0 +1,132 @@
+body{
+    background: black;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    place-items: center;
+    align-content: space-evenly;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-evenly;
+}
+
+.tic, h4 {
+    font-size: 25px;
+    color: white;
+    margin: -20px;
+    width: 180px;
+    word-break: normal;
+    text-align: center;
+}
+
+input{
+    height: 30px;
+    width: 200px;
+    border-radius: 30px;
+    margin: -150px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input:focus{
+    outline: none;
+}
+
+.start {
+    height: 50px;
+    width: 20%;
+    border-radius: 15px;
+    border: none;
+    background: #ff7373;
+    box-shadow: 0px 5px 0px 0px #CE4646;
+    font-family: serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.start:focus {
+    outline: none;
+}
+
+.start:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.tie{
+    display: none;
+    color: white;
+    font-size: 50px;
+}
+.playArea{
+    width: 330px;
+    height: 330px;
+    display: none; /*change to flex */
+    flex-wrap: wrap;
+}
+
+.box{
+    width:108.5px;
+    height: 108.5px;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 75px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+#b1,#b2,#b3 {
+    border-top: none;
+}
+
+#b1,#b4,#b7 {
+    border-left: none;
+}
+
+#b7,#b8,#b9 {
+    border-bottom: none;
+}
+
+#b3,#b6,#b9 {
+    border-right: none;
+}
+
+.score{
+    width: 95%;
+    margin: 2.5%;
+    height: 100px;
+    background: rgb(13, 15, 15);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    display: none; /*change to flex */
+    flex-direction: row;
+    place-items: center;
+    color: whitesmoke;
+}
+
+.player2{
+    transform: rotate(180deg);
+}
+
+.points{
+    width: fit-content;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 10%;
+}

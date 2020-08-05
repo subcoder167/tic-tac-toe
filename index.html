@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tic">TIC-TAC-TOE by Subhajit Maji</div>
+        <input type="text" name="1st Player" id="player1" class="pname" placeholder="1st player's name...">
+        <h4 id="vs">vs</h4>
+        <input type="text" name="2nd Player" id="player2" class="pname" placeholder="2nd player's name...">
+        <button class="start">START</button>
+        <div class="score player2">
+            <div class="points">
+                SCORE
+                <span id ="scr2">0</span>
+            </div>
+            <div id="pname2">PLAYER O</div>
+        </div>
+        <div class="tie">IT'S A TIE!</div>
+        <div class="playArea">
+            <div data-cell-index="0" class="box" id="b1"></div>
+            <div data-cell-index="1" class="box" id="b2"></div>
+            <div data-cell-index="2" class="box" id="b3"></div>
+            <div data-cell-index="3" class="box" id="b4"></div>
+            <div data-cell-index="4" class="box" id="b5"></div>
+            <div data-cell-index="5" class="box" id="b6"></div>
+            <div data-cell-index="6" class="box" id="b7"></div>
+            <div data-cell-index="7" class="box" id="b8"></div>
+            <div data-cell-index="8" class="box" id="b9"></div>
+        </div>
+        <div class="score player1">
+            <div class="points">
+                SCORE
+                <span id="scr1">0</span>
+            </div>
+            <div id="pname1">PLAYER X</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
