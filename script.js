@@ -144,6 +144,7 @@ document.querySelector(".start").addEventListener("click", function(){
         document.getElementById("player2").style.display = "none"; 
         document.getElementById("vs").style.display = "none"; 
         document.querySelector('.tic').style.display = "none";
+        document.querySelector(".p2").style.display = "none";
         document.getElementById("pname1").innerHTML = name1;
         document.getElementById("pname2").innerHTML = name2;
         play();	
